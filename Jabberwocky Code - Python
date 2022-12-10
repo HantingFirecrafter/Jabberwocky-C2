@@ -860,7 +860,7 @@ def start_game():
             pause_error1 = input("")
             start_game()
     elif open_letter == "no" or open_letter == "No":
-        enter_forest = print("You stare at the forest infront of you, should you go in and try to find the Hut? yes/no")
+        enter_forest = input("You stare at the forest infront of you, should you go in and try to find the Hut? yes/no")
         if enter_forest == "yes" or enter_forest == "Yes":
             forest_1()
         elif enter_forest == "no" or enter_forest == "No":
