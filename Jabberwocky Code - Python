@@ -1,0 +1,1086 @@
+import sys
+import time 
+#The import functions allows you to access certain modules. In this case, it is necessary for the type command.
+def type(string):
+#I will define def command down below.
+    for char in string:
+        time.sleep(0.03)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+
+
+
+
+wood = 0
+#This is typically how a variable is set, after it is set, it's values can be changed but the name will still be referenced towards that value.
+#This is particularly useful in this case is because you can simply keep track of the variable "wood", and act accordingly as the value changes
+#NO MATTER WHAT THE VALUE CHANGES TO.
+#Otherwise, you cannot collect data from the user, as in a game you are not there to make adaptions in the code as the user inputs his choices.
+wooden_sword = 0
+wooden_armour = 0
+wooden_axe = 0
+iron = 0
+iron_sword = 0
+iron_armour = 0
+iron_axe = 0
+
+game_title = """
+          (`-')  _ <-.(`-') <-.(`-')  (`-')  _   (`-')      .->                        <-.(`-')            
+          (OO ).-/  __( OO)  __( OO)  ( OO).-/<-.(OO )  (`(`-')/`)     .->    _         __( OO)      .->   
+   <-.--. / ,---.  '-'---.\ '-'---.\ (,------.,------,),-`( OO).',(`-')----.  \-,-----.'-'. ,--. ,--.'  ,-.
+ (`-'| ,| | \ /`.\ | .-. (/ | .-. (/  |  .---'|   /`. '|  |\  |  |( OO).-.  '  |  .--./|  .'   /(`-')'.'  /
+ (OO |(_| '-'|_.' || '-' `.)| '-' `.)(|  '--. `|  |_.'||  | '.|  |( _) | |  | /_) (`-')|      /)(OO \    / 
+,--. |  |(|  .-.  || /`'.  || /`'.  | |  .--' |  .   .'|  |.'.|  | \|  |)|  | ||  |OO )|  .   '  |  /   /) 
+|  '-'  / |  | |  || '--'  /| '--'  / |  `---.|  |\  \ |   ,'.   |  '  '-'  '(_'  '--'\|  |\   \ `-/   /`  
+ `-----'  `--' `--'`------' `------'  `------'`--' '--'`--'   '--'   `-----'    `-----'`--' '--'   `--'      
+"""
+print(game_title)
+
+user_name = input("What is your name?")
+#Example of collecting data.
+#Whatever the input name is, our code will automatically adapt to that name and use it for future purposes.
+print("Press Enter to Begin")
+#The Print Command! Used over 300 times! This command is simple and important, it converts this complex code page into a visible text for the user.
+#The user can only see the text in gree.
+
+pause_1 = input("")
+#This input command will work as follows:
+#1. print out whatever is in the bracket.
+#2. collect the input from the user.
+#This might seem confusing, so often you need to put information for the user in the bracket after the input to tell them what to input. (Their choices)
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
+#Jabari Questions:
+def jabari_1():
+    print ("\u001b[32m Question #1: What did Jabari want to do at the beginning of the book?\u001b[0m")
+
+    print("")
+    print("1. Eat 🍽")
+    print("2. Swim in the pool 🏊🏾")
+    print("3. Jump off the diving board 🤿")
+    print("")
+  
+    response_j1 = int(input("Please Type 1, 2, or 3 to select one of the options\n"))
+#The j1 here represents Jabari1
+    if response_j1 == 1:
+        print("Please Try Again, he is not hungry")
+        print("")
+        jabari_1()
+   
+  
+    elif response_j1 == 2:
+        print("No... he does swim in the pool, afterwards, though.")
+        print("")
+        print("You can try again!")
+        print("")
+        jabari_1()
+    
+  
+    elif response_j1 == 3:
+        print ("Great Job!")
+        print (" Press Enter to continue ")
+        jabari_filler = input("")
+   
+    
+    else:
+        print("This is not a valid choice, please try again")
+        print("")
+        jabari_1()
+
+def jabari_2():
+    print ("\u001b[32m Question #2: What did Jabari say he needs to do before jumping?\u001b[0m")
+
+    print("")
+    print("1. Sleeping 💤")
+    print("2. Stretching 🙆🏾")
+    print("3. Diving 🤿")
+    print("")
+  
+    response_j2 = int(input("Please Type 1, 2, or 3 to select one of the options\n"))
+#The j1 here represents Jabari1
+    if response_j2 == 1:
+        print("Please Try Again, he was not sleeping.")
+        print("Would you sleep before jumping?")
+        jabari_2()
+   
+  
+    elif response_j2 == 2:
+        print("Great Job!")
+        print("")
+        jabari_filler2 = input("")  
+    
+  
+    elif response_j2 == 3:
+        print ("Please Try Again, close guess thouugh.")
+        print ("")
+        jabari_2()
+   
+    
+    else:
+        print("This is not a valid choice, please try again")
+        print("")
+        jabari_2()
+
+def jabari_3():
+    print ("\u001b[32m Question #3: Why does Jabari want to jump today?\u001b[0m")
+
+    print("")
+    print("1. He is very energized 💪🏾")
+    print("2. He wants to impress his dad ")
+    print("3. He just passed the swim test 🏊🏾")
+    print("")
+  
+    response_j3 = int(input("Please Type 1, 2, or 3 to select one of the options\n"))
+#The j1 here represents Jabari1
+    if response_j3 == 1:
+        print("Please Try Again")
+        print("")
+        jabari_3()
+   
+  
+    elif response_j3 == 2:
+        print("Incorrect...")
+        print("")
+        jabari_3()
+    
+  
+    elif response_j3 == 3:
+        print ("Great Job! You got it!")
+        print ("Press Enter to Continue")
+        jabari_filler3 = input("")   
+    
+    else:
+        print("This is not a valid choice, please try again")
+        print("")
+        jabari_3()
+
+def jabari_4():
+    print ("\u001b[32m Question #4: When Jabari looked at the high diving board, he was...\u001b[0m")
+
+    print("")
+    print("1. Blue 🟦")
+    print("2. Scared 😬")
+    print("3. Excited 🤩")
+    print("")
+  
+    response_j4 = int(input("Please Type 1, 2, or 3 to select one of the options\n"))
+#The j1 here represents Jabari1
+    if response_j4 == 1:
+        print("Please Try Again, he was not feeling blue.")
+        print("")
+        jabari_4()
+   
+  
+    elif response_j4 == 2:
+        print("Great Job!")
+        print("")
+        print("Now, to defeat the Jabberwock, you need to answer one more question!")
+        print("")
+        jabari_5()
+    
+  
+    elif response_j4 == 3:
+        print ("Please Try Again, he was not feeling excited.")
+        print ("")
+        jabari_4()
+   
+    
+    else:
+        print("This is not a valid choice, please try again")
+        print("")
+        jabari_4()
+
+def jabari_5():
+    print ("\u001b[32m Question #5: What did Jabari say he will do next?\u001b[0m")
+    print("1. Backflip 💦")
+    print("2. Double Backflip 💦💦")
+    print("3. Triple Backflip 💦💦💦")
+    print("")
+  
+    response_j5 = int(input("Please Type 1, 2, or 3 to select one of the options\n"))
+#The j1 here represents Jabari1
+    if response_j5 == 1:
+        print("Please Try Again, Hint: it's two times the backflip.")
+        print("")
+        jabari_5()
+   
+  
+    elif response_j5 == 2:
+        print("Great Job!")
+        print("")
+        print("You got it! Press Enter to continue..")
+        jabari_filler5 = input("")
+    
+  
+    elif response_j5 == 3:
+        print ("Please Try Again, a bit too much.")
+        print ("")
+        jabari_5()
+   
+    
+    else:
+        print("This is not a valid choice, please try again")
+        print("")
+        jabari_5()
+#End of Jabari Questions
+#------------------------------------------------------------------------------------------------------------------------------------------------
+
+def jabberwocky_poem():
+    print(""" 
+ ______                                               _   __                 _____       __       __                                                  __          
+|_   _ \                                            _/ |_[  |               |_   _|     [  |     [  |                                                [  |  _      
+  | |_) |  .---.  _   _   __  ,--.   _ .--.  .---. '-| |-'| |--.  .---.       | | ,--.   | |.--.  | |.--.   .---.  _ .--.  _   _   __   .--.   .---.  | | / ]     
+  |  __'. / /__\|[ \ [ \ [  ]`'_\ : [ `/'`\]/ /__\|  | |  | .-. |/ /__\|  _   | |`'_\ :  | '/'`\ \| '/'`\ \/ /__\|[ `/'`\][ \ [ \ [  ]/ .'`\ \/ /'`\] | '' <      
+ _| |__) || \__., \ \/\ \/ / // | |, | |    | \__.,  | |, | | | || \__., | |__' |// | |, |  \__/ ||  \__/ || \__., | |     \ \/\ \/ / | \__. || \__.  | |`\ \  _  
+|_______/  '.__.'  \__/\__/  ('-;__/[___]    '.__.'  \__/[___]|__]'.__.' `.____.'("-;__/[__;.__.'[__;.__.'  '.__.'[___]     \__/\__/   '.__.' '.___.'[__|  \_])_/ 
+                                                                                                                                                                  
+        """)
+    print("""
+                        __                        _  
+                       [  |                      | | 
+ _ .--..--.    _   __   | |.--.    .--.   _   __ | | 
+[ `.-. .-. |  [ \ [  ]  | '/'`\ \/ .'`\ \[ \ [  ]| | 
+ | | | | | |   \ '/ /   |  \__/ || \__. | \ '/ / |_| 
+[___||__||__][\_:  /   [__;.__.'  '.__.'[\_:  /  (_) 
+              \__.'                      \__.'       
+        """)
+
+    print("""
+ _________  __                  _                             _   __              _     __         _   _             
+|  _   _  |[  |                (_)                           / |_[  |            / |_  [  |       (_) / |_           
+|_/ | | \_| | |--.  .---.      __  ,--.  _   _   __  .--.   `| |-'| |--.   ,--. `| |-'  | |.--.   __ `| |-'.---.     
+    | |     | .-. |/ /__\|    [  |`'_\ :[ \ [ \ [  ]( (`\]   | |  | .-. | `'_\ : | |    | '/'`\ \[  | | | / /__\|    
+   _| |_    | | | || \__.,  _  | |// | |,\ \/\ \/ /  `'.'.   | |, | | | | // | |,| |,   |  \__/ | | | | |,| \__., _  
+  |_____|  [___]|__]'.__.' [ \_| |('-;__/ \__/\__/  [\__) )  \__/[___]|__](-;__/\__/  [__;.__.' [___]\__/ '.__.')_/ 
+                            \____/                                                                                   
+        """)
+    print("""
+ _________  __                     __                              _   __              _                                  _          __       _  
+|  _   _  |[  |                   [  |                            / |_[  |            / |_                               / |_       [  |     | | 
+|_/ | | \_| | |--.  .---.   .---.  | |  ,--.  _   _   __  .--.   `| |-'| |--.   ,--. `| |-'  .--.   .---.  _ .--.  ,--. `| |-'.---.  | |--.  | | 
+    | |     | .-. |/ /__\| / /'`\] | | `'_\ :[ \ [ \ [  ]( (`\]   | |  | .-. | `'_\ : | |   ( (`\] / /'`\][ `/'`\]`'_\ : | | / /'`\] | .-. | | | 
+   _| |_    | | | || \__., | \__.  | | // | |,\ \/\ \/ /  `'.'.   | |, | | | | // | |,| |,   `'.'. | \__.  | |    // | |,| |,| \__.  | | | | |_| 
+  |_____|  [___]|__]'.__.' '.___.'[___]('-;__/ \__/\__/  [\__) )  \__/[___]|__]('-;__/\__/  [\__) )'.___.'[___]   ('-;__/\__/'.___.'[___]|__](_) 
+                                                                                                                                                 
+        """)
+
+    print("""
+ ______                                               _   __                 _____         __           _           __         ______    _                 __     
+|_   _ \                                             / |_[  |               |_   _|       [  |         (_)         [  |       |_   _ \  (_)               |  ]    
+  | |_) |  .---.  _   _   __  ,--.   _ .--.  .---.  `| |-'| |--.  .---.       | | __   _   | |.--.     __  __   _   | |.--.     | |_) | __   _ .--.   .--.| |     
+  |  __'. / /__\|[ \ [ \ [  ]`'_\ : [ `/'`\]/ /__\|  | |  | .-. |/ /__\|  _   | |[  | | |  | '/'`\ \  [  |[  | | |  | '/'`\ \   |  __'.[  | [ `/'`\]/ /'`)' |     
+ _| |__) || \__., \ \/\ \/ / // | |, | |    | \__.,  | |, | | | || \__., | |__' | | \_/ |, |  \__/ |_  | | | \_/ |, |  \__/ |  _| |__) || |  | |    | \__/  |  _  
+|_______/  '.__.'  \__/\__/  ('-;__/[___]    '.__.'  \__/[___]|__]'.__.' `.____.' '.__.'_/[__;.__.'[ \_| | '.__.'_/[__;.__.'  |_______/[___][___]    '.__.;__])_/ 
+                                                                                                    \____/                                                        
+        """)
+
+    print("""
+                      __          __                          _   __                 ___                                _                           
+                     |  ]        [  |                        / |_[  |              .' ..]                              (_)                          
+ ,--.   _ .--.   .--.| |   .--.   | |--.  __   _   _ .--.   `| |-'| |--.  .---.   _| |_  _ .--.  __   _   _ .--..--.   __   .--.   __   _   .--.    
+`'_\ : [ `.-. |/ /'`|' |  ( (`\]  | .-. |[  | | | [ `.-. |   | |  | .-. |/ /__\| '-| |-'[ `/'`\][  | | | [ `.-. .-. | [  |/ .'`\ \[  | | | ( (`\]   
+// | |, | | | || \__/  |   `'.'.  | | | | | \_/ |, | | | |   | |, | | | || \__.,   | |   | |     | \_/ |, | | | | | |  | || \__. | | \_/ |, `'.'.   
+('-;__/[___||__]'.__.;__] [\__) )[___]|__]'.__.'_/[___||__]  \__/[___]|__]'.__.'  [___] [___]    '.__.'_/[___||__||__][___]'.__.'  '.__.'_/[\__) )  
+                                                                                                                                                    
+        """)
+    print("""
+ ______                         __                                       _          __       _  
+|_   _ \                       |  ]                                     / |_       [  |     | | 
+  | |_) |  ,--.   _ .--.   .--.| | .---.  _ .--.  .--.   _ .--.   ,--. `| |-'.---.  | |--.  | | 
+  |  __'. `'_\ : [ `.-. |/ /'`|' |/ /__\|[ `/'`\]( (`\] [ `.-. | `'_\ : | | / /'`\] | .-. | | | 
+ _| |__) |// | |, | | | || \__/  || \__., | |     `'.'.  | | | | // | |,| |,| \__.  | | | | |_| 
+|_______/ ('-;__/[___||__]'.__.;__]'.__.'[___]   [\__) )[___||__]('-;__/\__/'.___.'[___]|__](_) 
+                                                                                                
+        """)
+    print("Press Enter to go back to the rest of the Hut.")
+    pause_8 = input("")
+    enter_hut()
+#def commands allows you to create your own custom commands, this is very useful.
+#Because you can write a bunch of code for just once, and summarize it with one custom command when you need to use this line of code again!
+#It saves a lot of time and makes the code much easier to edit and debug.
+def player_death():
+#In this case, player_death is the summary for all the code below, until line 326.
+    print("""
+____    ____  ______    __    __      _______   __   _______  _______  
+\   \  /   / /  __  \  |  |  |  |    |       \ |  | |   ____||       \ 
+ \   \/   / |  |  |  | |  |  |  |    |  .--.  ||  | |  |__   |  .--.  |
+  \_    _/  |  |  |  | |  |  |  |    |  |  |  ||  | |   __|  |  |  |  |
+    |  |    |  `--'  | |  `--'  |    |  '--'  ||  | |  |____ |  '--'  |
+    |__|     \______/   \______/     |_______/ |__| |_______||_______/ 
+                                                                       
+
+        """)
+    print("")
+    print("""
+  _______      ___      .___  ___.  _______      ______   ____    ____  _______ .______      
+ /  _____|    /   \     |   \/   | |   ____|    /  __  \  \   \  /   / |   ____||   _  \     
+|  |  __     /  ^  \    |  \  /  | |  |__      |  |  |  |  \   \/   /  |  |__   |  |_)  |    
+|  | |_ |   /  /_\  \   |  |\/|  | |   __|     |  |  |  |   \      /   |   __|  |      /     
+|  |__| |  /  _____  \  |  |  |  | |  |____    |  `--'  |    \    /    |  |____ |  |\  \----.
+ \______| /__/     \__\ |__|  |__| |_______|    \______/      \__/     |_______|| _| `._____|
+                                                                                             
+        """)
+    print("You died! Press Enter to respawn at the edge of the forest.")
+    pause_6 = input("")
+    start_game()
+
+def exit_hut():
+    print("""You are in front of the hut, and you looked around the village. 
+
+        1. Towards the EAST, There is a small garden with a big oak tree 🌳 in the middle.
+
+        2. Towards the WEST, There is a dark forest  with a village house beside it.
+
+        3. Towards the NORTH, There is a crafting shop 🛖. 
+
+        4. Go back in the Hut.
+        """)
+    print("")
+    direction_after_exit_hut = int(input("Which way do you want to go? Insert your number choice"))
+#if statements!
+#They are the ones analyzing the data collected by the input command.
+#In this case, the data collected is an integer value.
+#So the if-elif(when if is not true, do this if...)-else will act accordingly, depending on the value of the integer input.
+    if direction_after_exit_hut == 1:
+        to_the_garden()
+    elif direction_after_exit_hut == 2:
+        to_the_dark_forest()
+    elif direction_after_exit_hut == 3:
+        to_the_crafter()
+    elif direction_after_exit_hut == 4:
+        enter_hut()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error8 = input("")
+        exit_hut()
+
+def to_the_garden():
+    print("You walked toward the garden , press Enter to continue walking.")
+    pause_9 = input("")
+    for garden in range(3):
+        print("You continued to trott towards the garden, press Enter to keep walking.")
+        pause_10 = input("")
+    arrive_garden()
+
+def arrive_garden():
+    print("You arrived at the garden!")
+    print("")
+    print("A tall oak tree stands before you, maybe this is the wood that Bundlebore was talking about?")
+    print("")
+    collect_wood = int(input("""
+            1. Gather wood from tree.
+
+            2. Leave Garden.
+
+        """))
+    if collect_wood == 1 and wooden_axe == 1:
+#"and" is used in an if statement, when an and appears, it means that you need to have both variables true. 
+#So if either collect_wood ≠ 1 or wooden_axe ≠ 1, then this portion of code will be ignored.
+
+        global wood
+#I will talk about global later.
+
+#For Loops are used to repeat certain lines of code, in order to save space.
+#In this case it is repeating line 386 and 389.
+        for w in range(6):
+            print("Collecting wood... press Enter to keep collecting.")
+#indents are used to mark that a certain line of code belongs to a broader code. 
+#In this case, the print("") belongs to the for loop, therefore it needs to do what the for loop says: "Repeat 6 times"
+            pause_11 = input("")
+        print("You finished! You collected 15 blocks of wood!")
+        wood = wood + 15
+#This is how to modify a variable: (new)variable = (old)variable + value.
+        leave_garden = input("Would you like to leave the garden and return to the hut? yes/no")
+    elif collect_wood == 1:
+        jabari_1()
+        for w in range(5):
+            print("Collecting wood... press Enter to keep collecting.")
+            pause_11 = input("")
+        print("You finished! You collected 5 blocks of wood!")
+        wood = wood + 5
+        leave_garden = input("Would you like to leave the garden and return to the hut? yes/no")
+        if leave_garden == "Yes" or leave_garden == "yes":
+            print("You have returned to the front of the Hut.")
+            exit_hut()
+        elif leave_garden == "No" or leave_garden == "no":
+            arrive_garden()
+        else:
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error9 = input("")
+            arrive_garden()
+    elif collect_wood == 2:
+        print("You have returned to the front of the Hut.")
+        exit_hut()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error10 = input("")
+        arrive_garden()
+
+def to_the_dark_forest():
+    print("You walked toward the dark forest, press Enter to continue walking.")
+    pause_11 = input("")
+    for dark_forest in range(3):
+        print("You continued to wander towards the dark forest, press Enter to keep walking.")
+        pause_12 = input("")
+    arrive_dark_forest()
+
+def arrive_dark_forest():
+#More storyline, nice!
+    print("You arrived at the edge of the Dark Forest, a villager came out of the house to greet you.")
+    print("")
+    print("DALE: HI! I AM DALE, A SENTRY. IN THIS FOREST THERE ARE LOTS OF BANDERSNATCH, AND I AM SUPPOSED TO ALERT THE VILLAGE WHEN IT COMES OUT!")
+    print("")
+    descend_into_dark_forest = input("DALE: THE BANDERSNATCH IS FURIOUS AND POWERFUL, OH! DON'T TELL ME YOU ARE GOING IN! ARE YOU? yes/no")
+    if descend_into_dark_forest == "yes" or descend_into_dark_forest == "Yes":
+        print("")
+        print("DALE: W-WELL, BE CAREFUL, AND USE YOUR SWORD! IF YOU DON'T HAVE A SWORD, NEVER GO IN! ALSO, NEVER RUN AWAY FROM A BANDERSNATCH! NEVER!")
+        print("Press Enter to go into the dark forest, if you dare.")
+        pause_13 = input("")
+        in_dark_forest()
+    elif descend_into_dark_forest == "no" or descend_into_dark_forest == "No":
+        print("")
+        print("DALE: PHEW! WELL, YOU MIGHT WANT TO GO TO THE CRAFTER, HE IS A REALLY NICE GUY. I CAN SEND YOU THERE!")
+        exit_dark_forest()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error11 = input("")
+        arrive_dark_forest()
+
+def in_dark_forest():
+#The global code turns variables (white parts) into global variables.
+#A global variable, unlike a local one, can be referenced both inside and outside a function.
+    global wooden_sword
+    global wooden_axe
+    global wooden_armour
+    global iron_sword
+    global iron
+#I used them because python does not recognize a local variable outside of its function.
+
+    print("You enter the forest, it gets darker the more you wander in. Press Enter...")
+    dark_forest_pause1 = input("")
+    print("Darker...")
+    dark_forest_pause2 = input("")
+    print("A huge, hairy creature lunged out from behind the tree, growling.")
+    bander_choice = int(input("""
+
+    What should you do?
+
+    1. Run Away 🏃🏻
+
+    2. Fight the Bandersnatch 🤺
+
+    3. Try to negotiate with the Bandersnatch 🗣
+
+    Please pick your choice with the number labeled.
+
+        """))
+#Emojis! My creation!
+    if bander_choice == 1:
+        print("")
+        print("")
+        print("The Bandersnatch come up to you from behind and kills you violently.")
+        print("")
+        player_death()
+    elif bander_choice == 2 and iron_sword == 1:
+        print("You kill the Bandersnatch easily with your powerful iron sword. You collected 35 more pieces of iron.")
+        print("")
+        print("Maybe you should try to find the Jabberwock...")
+        print("")
+# int converts the collected data into integer form, which is not a problem here because unless a typo occurs,
+#(Which should be covered by the else statement) the user is entering a positive whole number anyway.
+        find_jabberwock = int(input("""
+                1. Return to the Crafter,
+                2. Keep Wandering.
+            """))
+        if find_jabberwock == 1:
+            to_the_crafter()
+        elif find_jabberwock == 2:
+            wandering_in_dark_woods()
+        else:
+            print("Your input was invalid, please press Enter to try again, you may have to restart from the beginning of the forest.")
+            pause_error16 = input("")
+            in_dark_forest()
+    elif bander_choice == 2 and wooden_sword == 1:
+        print("HIT THE MONSTER WITH YOUR SWORD! PRESS S to SWING")
+        swing = input("")
+        jabari_2()
+        for battle_Bandersnatch in range(2):
+            print("THE BANDERSNATCH DROPPED BACK, BUT STARTED ATTACKING AGAIN, HIT HIM! Press S")
+            swing2 = input("")
+        jabari_3()
+        print("YOU DID IT! YOU KILLED THE BANDERSNATCH!")
+        print("")
+        print("You search the body of the Bandersnatch, and you found 35 pieces of IRON!")
+        iron = iron + 35
+        print("")
+        print("You probably should go and give these to the Crafter, press Enter to do so.")
+        pause_30 = input("")
+        to_the_crafter()
+    elif bander_choice == 2:
+        print("You are overpowered by the Bandersnatch, and it kills you.")
+        player_death()
+    elif bander_choice == 3 and iron_sword == 1:
+        print("Just like the Jubjub Bird, the Bandersnatch does not negotiate, but since you have the Iron Sword, you swing it and forces the Bandersnatch to back off, giving you a second chance to choose.")
+        in_dark_forest()
+
+def wandering_in_dark_woods():
+    print("Press Enter to continue in the follow events...")
+    print("")
+    print("You walk on the forest floor, leaves crumble beneath your feet.")
+    filler1 = input("")
+    print("A distant murmur can be heard, you rest beside a Tumtum Tree, and starts thinking...")
+    filler2 = input("")
+#I love this text art.
+    print(""" 
+
+ ██▀███   ▒█████   ▄▄▄       ██▀███   ▐██▌ 
+▓██ ▒ ██▒▒██▒  ██▒▒████▄    ▓██ ▒ ██▒ ▐██▌ 
+▓██ ░▄█ ▒▒██░  ██▒▒██  ▀█▄  ▓██ ░▄█ ▒ ▐██▌ 
+▒██▀▀█▄  ▒██   ██░░██▄▄▄▄██ ▒██▀▀█▄   ▓██▒ 
+░██▓ ▒██▒░ ████▓▒░ ▓█   ▓██▒░██▓ ▒██▒ ▒▄▄  
+░ ▒▓ ░▒▓░░ ▒░▒░▒░  ▒▒   ▓▒█░░ ▒▓ ░▒▓░ ░▀▀▒ 
+  ░▒ ░ ▒░  ░ ▒ ▒░   ▒   ▒▒ ░  ░▒ ░ ▒░ ░  ░ 
+  ░░   ░ ░ ░ ░ ▒    ░   ▒     ░░   ░     ░ 
+   ░         ░ ░        ░  ░   ░      ░    
+                                           
+        """)
+    print("Press Enter to find out what happened!")
+    filler3 = input("")
+    print("With a roar, you see the Jabberwock, with eyes of flame, came whiffling through the Tulgey Wood, and burbled as it came!")
+    jabberwock_choice = int(input("""
+        What should you do?
+
+        1. Fight the Jabberwock! 👺🤺
+
+        2. Run Away! 🏃🏻
+
+        3. Eat some muffin. 🧁
+
+        """))
+    if jabberwock_choice == 1:
+        jabari_4()
+        print("One-two, one-two, and through and through!")
+        print("")
+        print("The iron blade went snicker-snack!")
+        print("")
+        print("With your mighty duel, you killed the Jabberwock.")
+        print("")
+        take_head = input("Let's bring the monster's head back and tell Bundlebore! Shall we? yes/no")
+        if take_head == "yes" or take_head == "Yes":
+            craft_or_bund = int(input("""Done! Now let's head back! Do you want to go to...
+                1. Bundlebore 🧔🏻
+                2. The Crafter 🧔🏽‍♂️
+                """))
+            if craft_or_bund == 1:
+                print("Don't forget to tell Bundlebore that you have the 'headofjabberwock'! Press Enter to continue")
+                filler4 = input("")
+                bundlebore()
+            elif craft_or_bund == 2:
+                print("Alright! Let's go to the crafting shop.")
+                arrive_crafting_shop()
+    elif jabberwock_choice == 2:
+        print("Terrible choice. You have a sword, why not fight him with it?")
+        print("")
+        print("You do escape, but now the Jabberwock is gone. Press Enter to continue")
+        filler5 = input("")
+        wandering_in_dark_woods()
+    elif jabberwock_choice == 3:
+        print("You gracefully eat you muffins as the Jabberwock gracefully eats you.")
+        print("")
+        print("Please press Enter to restart.")
+        filler6 = input("")
+        player_death
+    else:
+        print("Your input was invalid, and now the Jabberwock disappeared again, please press Enter.")
+        pause_error70 = input("")
+        wandering_in_dark_woods()
+
+
+
+def exit_dark_forest():
+    print("""You turned around and you looked around the village. 
+
+        1. Towards the EAST, You see the Hut.
+
+        2. Towards the NORTHEAST, There is a crafting shop. 
+
+        3. Go Back to Dale.
+        """)
+    print("")
+    direction_after_exit_dark_forest = int(input("Which way do you want to go? Insert your number choice"))
+    if direction_after_exit_dark_forest == 1:
+        exit_hut()
+    elif direction_after_exit_dark_forest == 2:
+        to_the_crafter()
+    elif direction_after_exit_dark_forest == 3:
+        arrive_dark_forest()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error12 = input("")
+        exit_dark_forest()
+
+def to_the_crafter():
+    print("You walked toward the crafting shop, press Enter to continue walking.")
+    pause_14 = input("")
+    for crafting_shop in range(3):
+        print("You continued to wander toward the crafting shop, press Enter to keep walking.")
+        pause_15 = input("")
+    arrive_crafting_shop()
+
+
+
+def arrive_crafting_shop():
+
+    global wood
+    global wooden_sword
+    global iron
+    global iron_sword 
+
+    print("You are now in the crafting shop, a sleepy man looked at you. ")
+    print("")
+    print("CRAFTER: HOWDY FELLA! I AM THE CRAFTER, WHAT ARE YA BRINGIN' ME TODAY?")
+    print("")
+    print("CRAFTER: GIMME ANYTHING AND I'LL CRAFT A TOOL FOR YA. NO NEED TO PAY, WE GOTTA WORK TOGETHER TO KEEP THOSE BEASTS AWAY.")
+    print("")
+    print("You can give him whatever materials, you have, here is how to communicate with him:")
+    print("""
+            🤷🏻‍♂️ Nothing ---> "nothing"
+            🪵 Wood ---> "wood"
+            🪨 Iron ---> "iron"
+            🐲 Jabberwock's Head ---> "jabberwock head"
+
+            Press Enter to continue.
+
+        """)
+    pause_16 = input("")
+    craft_exchange = input("CRAFTER: WELL, WHAT DO YOU HAVE?")
+    if craft_exchange == "nothing" or craft_exchange == "Nothing":
+        print("CRAFTER: THAT'S ALRIGHT! TRY GOING TO THE GARDEN AND BRING ME SOME WOOD!")
+        exit_crafting_shop()
+    elif craft_exchange == "wood" or craft_exchange == "Wood":
+        print("CRAFTER: AlRIGHTY! SOME WOOD! HERE IS A LIST OF THINGS I CAN CRAFT WITH WOOD:")
+        print("")
+        print("""
+            1. 🪃 Wooden Sword (5 Woods) 
+            2. 🪖 Wooden Armour(10 Woods) 
+            3. 🪓 Wooden Axe   (5 Woods) 
+            """)
+        wood_craft_choice = int(input("CRAFTER: 'SO WHAT DO YA WANT?' Enter the representing number."))
+        if wood_craft_choice == 1:
+            print("CRAFTER: YOU HAVE " + str(wood) + " PIECES OF WOOD, AND THE SWORD NEEDS 5.")
+            if wood >= 5:
+                print("")
+                print("CRAFTER: YOU HAVE ENOUGH WOOD AND I CRAFTED THE SWORD FOR YOU! Press C to collect")
+                pause_17 = input("")
+                wood = wood - 5
+                print("You now have a wooden sword!")
+                wooden_sword = 1
+                print("You will now exit the crafting shop.")
+                print("You can go to the dark forest now, try to kill the Bandersnatch.")
+                exit_crafting_shop()
+            else:
+                print("CRAFTER: YOU DON'T HAVE ENOUGH WOOD! COME BACK LATER! Press Enter to exit the Crafting Shop.")
+                pause_18 = input("")
+                exit_crafting_shop()
+        elif wood_craft_choice == 2:
+            print("")
+            print("CRAFTER: YOU HAVE " + str(wood) + " PIECES OF WOOD, AND THE ARMOUR NEEDS 10.")
+            if wood >= 10:
+#Just a note: This above is a greater-than or equal to sign, and it functions exactly like its name: if wood is greater than or equal to 10: do blah blah blah
+                print("CRAFTER: YOU HAVE ENOUGH WOOD AND I CRAFTED THE ARMOUR FOR YOU! Press C to collect")
+                pause_19 = input("")
+                wood = wood - 10
+                print("You now have the wooden armour!")
+                wooden_armour = 1
+                print("You will now exit the crafting shop.")
+                exit_crafting_shop()
+            else:
+                print("CRAFTER: YOU DON'T HAVE ENOUGH WOOD! COME BACK LATER! Press Enter to exit the Crafting Shop.")
+                pause_20 = input("")
+                exit_crafting_shop()
+        elif wood_craft_choice == 3:
+            print("CRAFTER: YOU HAVE " + str(wood) + " PIECES OF WOOD, AND THE AXE NEEDS 5.")
+#Concatenation is displayed here, we can use plus signs to concatenate strings (green text) and variables (wood).
+            if wood >= 5:
+                print("")
+                print("CRAFTER: YOU HAVE ENOUGH WOOD AND I CRAFTED THE AXE FOR YOU! Press C to collect")
+                pause_21 = input("")
+                wood = wood - 5
+                print("You now have a wooden axe! You will get more wood by chopping the tree in the garden.")
+                wooden_axe = 1
+                print("You will now exit the crafting shop.")
+                exit_crafting_shop()
+            else:
+                print("CRAFTER: YOU DON'T HAVE ENOUGH WOOD! COME BACK LATER! Press Enter to exit the Crafting Shop.")
+                pause_22 = input("")
+                exit_crafting_shop()
+        else:        
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error13 = input("")
+            arrive_crafting_shop()
+    elif craft_exchange == "iron" or craft_exchange == "Iron":
+        print("CRAFTER: AlRIGHTY! IRON! HERE IS A LIST OF THINGS I CAN CRAFT WITH IRON:")
+        print("")
+        print("""
+            1. 🗡 Iron Sword (5 Irons)
+            2. 🥷🏻 Iron Armour(10 Irons)
+            """)
+        iron_craft_choice = int(input("CRAFTER: 'SO WHAT DO YA WANT?' Enter the representing number."))
+        if iron_craft_choice == 1:
+            print("")
+            print("CRAFTER: YOU HAVE " + str(iron) + " PIECES OF IRON, AND THE SWORD NEEDS 5.")
+            if iron >= 5:
+                print("")
+                print("CRAFTER: YOU HAVE ENOUGH IRON AND I CRAFTED THE SWORD FOR YOU! Press C to collect")
+                pause_23 = input("")
+                iron = iron - 5
+                print("You now have a iron sword! Try to find the Jabberwock and kill it! He might be in the Dark Forest.")
+                iron_sword = 1
+                print("Press Enter to continue.")
+                craft_shop_filler = input("")
+                print("You will now exit the crafting shop.")
+                exit_crafting_shop()
+            else:
+                print("")
+                print("CRAFTER: YOU DON'T HAVE ENOUGH IRON! COME BACK LATER! Press Enter to exit the Crafting Shop.")
+                pause_24 = input("")
+                exit_crafting_shop()
+        elif iron_craft_choice == 2:
+            print("")
+            print("CRAFTER: YOU HAVE " + str(iron) + " PIECES OF IRON, AND THE ARMOUR NEEDS 10.")
+            if iron >= 10:
+                print("")
+                print("CRAFTER: YOU HAVE ENOUGH IRON AND I CRAFTED THE ARMOUR FOR YOU! Press C to collect")
+                pause_25 = input("")
+                iron = iron - 10
+                print("You now have the iron armour!")
+                craft_shop_filler2 = input("")
+                iron_armour = 1
+                print("You will now exit the crafting shop.")
+                exit_crafting_shop()
+            else:
+                print("")
+                print("CRAFTER: YOU DON'T HAVE ENOUGH IRON! COME BACK LATER! Press Enter to exit the Crafting Shop.")
+                pause_26 = input("")
+                exit_crafting_shop()
+
+        else:        
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error14 = input("")
+            arrive_crafting_shop()
+    elif craft_exchange == "jabberwock head" or craft_exchange == "Jabberwock head" or craft_exchange == "jabberwock's head":
+        print("CRAFTER: WHAT! WOW! YOU KILLED THE JABBERWOCK!? NO WAY! QUICK, GO AND TELL BUNDLEBORE! TELL HIM THAT YOU HAVE 'headofjabberwock'")
+        print("Press Enter to go to the Hut.")
+        pause_29 = input("")
+        bundlebore()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error15 = input("")
+        arrive_crafting_shop()
+def exit_crafting_shop():
+    print("""You are in front of the crafting shop, and you looked around the village. 
+
+        1. Towards the SOUTHEAST, There is a small garden with a big oak tree 🌳 in the middle.
+
+        2. Towards the SOUTHWEST, There is a dark forest with a village house beside it.
+
+        3. Towards the SOUTH, There is the Hut 🛖.
+
+        4. Go back in the Crafting Shop.
+               """)
+    print("")
+    direction_after_exit_crafting_shop = int(input("Which way do you want to go? Insert your number choice"))
+    if direction_after_exit_crafting_shop == 1:
+        to_the_garden()
+    elif direction_after_exit_crafting_shop == 2:
+        to_the_dark_forest()
+    elif direction_after_exit_crafting_shop == 3:
+        enter_hut()
+    elif direction_after_exit_crafting_shop == 4:
+        arrive_crafting_shop()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error369 = input("")
+        exit_crafting_shop()
+
+def game_won():
+    print("""
+____    ____  ______    __    __     ____    __    ____  ______   .__   __.  __     
+\   \  /   / /  __  \  |  |  |  |    \   \  /  \  /   / /  __  \  |  \ |  | |  |    
+ \   \/   / |  |  |  | |  |  |  |     \   \/    \/   / |  |  |  | |   \|  | |  |    
+  \_    _/  |  |  |  | |  |  |  |      \            /  |  |  |  | |  . `  | |  |    
+    |  |    |  `--'  | |  `--'  |       \    /\    /   |  `--'  | |  |\   | |__|    
+    |__|     \______/   \______/         \__/  \__/     \______/  |__| \__| (__)    
+  
+          """)
+
+
+
+
+def boring_forest():
+    print("You have nothing to do and you are hungry, you have to continue.")
+    print("Press Enter to continue")
+    pause_7 = input("")
+    jubjub_forest()
+
+def start_game(): 
+    wood = 0
+    wooden_sword = 0
+    wooden_armour = 0
+    wooden_axe = 0
+    iron = 0
+    iron_sword = 0
+    iron_armour = 0
+    print("You are standing on the edge of a forest, with a letter in your hands.")
+    print("")
+    open_letter = input("Read letter? yes/no")
+
+    if open_letter == "yes" or open_letter == "Yes":
+        print("""
+            YOU OPEN THE LETTER, IT READS:
+
+            Dear """ + user_name + """, 
+
+            I hope this letter finds you well.
+
+            You must travel through the woods, and find the Jabberwock! If you keep walking, you will see a Hut, you will receive information inside.
+
+            Shun the frumious Bandersnatch!
+
+            Bundlebore
+            (press Enter to continue)
+            """)
+        pause_2 = input("")
+        enter_forest = input("You stare at the forest infront of you, should you go in and try to find the Hut? yes/no")
+        if enter_forest == "yes" or enter_forest == "Yes":
+            forest_1()
+        elif enter_forest == "no" or enter_forest == "No":
+            boring_forest()
+        else:
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error1 = input("")
+            start_game()
+    elif open_letter == "no" or open_letter == "No":
+        enter_forest = print("You stare at the forest infront of you, should you go in and try to find the Hut? yes/no")
+        if enter_forest == "yes" or enter_forest == "Yes":
+            forest_1()
+        elif enter_forest == "no" or enter_forest == "No":
+            boring_forest()
+        else:
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error2 = input("")
+            start_game()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error3 = input("")
+        start_game()
+
+def bundlebore():
+    print(" You are in the hut, you look around, there is an old man sitting on a bed, he introduces himself as Bundlebore, he will exchange knowledge/resources for material.")
+    print("")
+    print("If you have nothing, tell him 'nothing', otherwise give him the material.")
+    bundle_exchange = input("BUNDLEBORE: 'WHAT DO YOU HAVE, MY YOUNG BOY?")
+    if bundle_exchange == "nothing" or bundle_exchange == "Nothing":
+        print("BUNDLEBORE: 'OH THAT'S ALRIGHT, JUST DO AS I SAY. GO OUT AND FIND ME SOME WOOD.")
+        leave_hut = input("Would you like to leave the Hut? yes/no")
+        if leave_hut == "yes" or leave_hut == "Yes":
+            exit_hut()
+        elif leave_hut == "no" or leave_hut == "No":
+            print("Okay, you enter the Hut again.")
+            enter_hut()
+        else:
+            print("Your input was invalid, please press Enter to try again.")
+            pause_error7 = input("")
+            bundlebore()
+    elif bundle_exchange == "wood" or bundle_exchange == "Wood":
+        print("BUNDLEBORE: 'WOOD! GREAT! NOW BRING THIS WOOD TO THE CRAFTER, I CAN SEND YOU THERE.'")
+        print("")
+        print("Press Enter to continue and meet the Crafter.")
+        pause_4 = input("")
+        arrive_crafting_shop()
+    elif bundle_exchange == "iron" or bundle_exchange == "Iron":
+        print("BUNDLEBORE: 'IRON! WOW! NOW BRING THIS TO THE CRAFTER, I CAN SEND YOU THERE, HE WILL MAKE MAGNIFICANT TOOLS FOR YOU!'")
+        print("")
+        print("Press Enter to continue and meet the Crafter.")
+        pause_5 = input("")
+        arrive_crafting_shop()
+    elif bundle_exchange == "headofjabberwock" or bundle_exchange == "Headofjabberwock" or bundle_exchange == "HeadOfJabberwock" or bundle_exchange == "jabberwock head":
+        print("BUNDLEBORE: 'YOU DID IT! OH FRABJOUS DAY! CALLOUH, CALLAY!")
+        print("")
+        print("BUNDLEBORE: 'AND WITH THAT, MY CHILD, I CROWN YOU, THE KING OF " + user_name + "land! The Valley is yours, King " + user_name + ".")
+        win_or_not = input("You did it! You saved the village, would you like to put on the crown? yes/no")
+        if win_or_not == "yes" or win_or_not == "Yes":
+            game_won()
+        elif win_or_not == "no" or win_or_not == "No":
+            print("What a humble boy! You may rejoice yourself anyway!")
+            game_won()
+        else:
+            print("Your input was invalid... Ha! ha! ha! You won anyway!")
+            game_won()
+
+def forest_1():
+    print("You entered the forest, it is thick and bushy")
+
+    continue_forest = input("Continue? yes/no")
+
+    if continue_forest == "yes" or continue_forest == "Yes":
+        jubjub_forest()
+    elif continue_forest == "no" or continue_forest == "No":
+        boring_forest()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error4 = input("")
+        forest_1()
+
+def menu_page():
+
+    print("Welcome to the world of Jabberwocky! Here below is your game menu:")
+    print("1. Game Tutorial")
+    print("2. Commands")
+    print("3. United Nation Goals")
+    print("4. Start Game!")
+
+
+
+    menu_choice = int(input("All the choices are labeled with single digit number, please input your choice (single digit number). I would suggest you to go to 1. Tutorial and 2. Commands so you understand how the game works."))
+
+#A bit of nesting done here...
+#Mr. Jugoon I know you don't like this and you have mentioned it, so I never did this again. I do realize that this takes more work and is harder to modify.
+#But since this still serves its purpose perfectly fine, I did not change it.
+    if menu_choice == 1:
+        print("")
+        print("WELCOME TO THE GAME, HERE I WILL EXPLAIN HOW THE GAME WORKS, AS WELL AS THE BACKGROUND OF OUR GLOOMY WORLD. TYPE 'YES' TO CONTINUE AFTER EVERY LINE, AND PRESS 'NO' TO EXIT TO MAIN MENU. Continue? yes/no")
+        tutorial_1 = str(input("THE WORLD OF JABBEROCKY USED TO BE A CALLED THE WONDERLAND. EVERYONE LIVED IN PEACE AND HARMONY, IN OUR HAPPY VILLAGE. OUR KING IS BRAVE AND JUST AND OUR KINGDOM IS MORE JOVIAL THAN EVER. Continue? yes/no"))
+        if tutorial_1 == "yes" or tutorial_1 == "Yes":
+            tutorial_2 = str(input("THAT IS, UNTIL THE A GREAT MONSTER OF JABBERWOCK CAME TO OUR LANDS. HE KILLED OUR KING AND TERRORIZED OUR VILLAGE! UNDER THE GRUESOME TYRANT, WE SUFFERED FROM FAMINE AND POVERTY, BUT THAT IS NOT ALL OF OUR PROBLEMS... Continue? yes/no"))
+            if tutorial_2 == "yes" or tutorial_2 == "Yes":
+                tutorial_3 = str(input("With OUR GOVERNMENT GONE, WE HAVE NO SOLDIERS TO DEFEND US, SO BEAST LIKE JUBJUB BIRDS AND BANDERSNATCH, WHICH WE USED TO BE ABLE TO KEEP OUT, CAN NOW COME IN AND ATTACK US! Continue? yes/no"))
+                if tutorial_3 == "yes" or tutorial_3 == "Yes":
+                    tutorial_4 = str(input("At last you have arrived," + user_name + "! Just as the prophecy stated! Please help us! We can provide you with help and necessary tools, but none of us have the courage to fight the monster! Try to find The Hut, where you will receive further information... Continue? yes/no"))
+                    if tutorial_4 == "yes" or tutorial_4 == "Yes":
+                        print("You are all set! Answer questions to craft and build stuff, when you think you are ready, find the Jabberwock and chase it out for us!")
+                        menu_page()
+                    elif tutorial_4 == "no" or tutorial_4 == "No":
+                          menu_page()
+                elif tutorial_3 == "no" or tutorial_3 == "No":
+                      menu_page()
+            elif tutorial_2 == "no" or tutorial_2 == "No":
+                  menu_page()
+        elif tutorial_1 == "no" or tutorial_1 == "No":
+            menu_page()
+    elif menu_choice == 2: 
+        #This is the only place that the "type" command is used. It is sort of an experiment code. Also, this is the only place appropriate, because 
+        #information is rather important so we want to type it out slowly so that the user can see it better.
+        type("Here is a list of commands and its uses (press Enter to read the next one):")
+        print("")
+        nextline = input("")
+        type(" - yes/no commands: when a question ends with the phrase 'yes/no', it indicates that you get to choose to type 'yes' or 'no', please note that it only recognizes these two replies.")
+        print("")
+        nextline2 = input("")
+        type(" - multi-choice commands: this type of commands usually comes by giving you a list of choices, in this case you just need to type the integer representing your choice.")
+        print("")
+        nextline3 = input("")
+        type(" - Continue commands: when a question asks you whether you want to [continue], simply press 1. This is similar to a yes/no choice but for the game to continue you cannot choose 'no'.")
+
+        print("Press Enter to go back to the Menu")
+        pause_0 = input("")
+        menu_page()
+
+    elif menu_choice == 3:
+        UNSDG = input("I would suggest you to complete the game before reading this, did you complete playing the game? yes/no")
+        if UNSDG == "yes" or UNSDG == "Yes":
+                print("Alright! You can continue! Press Enter pls")
+                print("")
+        else:
+                print("You should really go and play the game first! Press Enter to go back to main menu.")
+                print("")
+                menu_page()
+
+        print("The world of Jabberwocky is certainly not a world you want to live in. Hunger? Horror? War? Definitely not an ideal place to settle.")
+        print("")
+        print("However, Earth also has its own problems. As of now, scientists and politicians alike are trying to solve those problems for our planet.")
+        print("")
+        print("Those solutions to the problems are known as the United Nations Sustainable Development Goals")
+        print("")
+        future_of_earth = input("Do you want to make the world a better place? yes/no")
+        if future_of_earth == "yes" or future_of_earth == "Yes":
+            print("Then you should try visiting the UNSDG Website!")
+            print("")
+            print("https://sdgs.un.org/goals")
+            print("")
+            print("Press Enter to go back to the Menu page.")
+            filler7 = input("")
+            menu_page()
+        elif future_of_earth == "no" or future_of_earth == "No":
+            print("You are a menace to society!")
+            print("Press Enter to go back to the Menu page.")
+            filler8 = input("")
+        else:
+            print("I do not understand what you mean, but I trust that you want to help our world!")
+            print("Here is the link to the UNSDG website!")
+            print("")
+            print("Press Enter to go back to the Menu page.")
+            filler9 = input("")
+
+
+
+    elif menu_choice == 4:
+        start_game()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error0 = input("")
+        menu_page()
+
+def enter_hut():
+    print("You enter the Hut, there is a piece of paper named 'Jabberwocky' on the oak crafting table.")
+    read_poem = input("Would you like to read the ancient poem of the Jabberwock? yes/no")
+    if read_poem == "yes" or read_poem == "Yes":
+        jabberwocky_poem()
+        bundlebore()
+    elif read_poem == "no" or read_poem == "No":
+#The or function requires only one of the two conditions to be true.
+        bundlebore()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error6 = input("")
+        enter_hut()
+
+def jubjub_forest():
+    print("JUBJUB BIRD IMAGE")
+    print("")
+    print("A horrific monster appeared in front of you. 'Jub,jub! Jub,jub!' it cried. It appeared to be a large, chicken-like bird")
+    print("")
+    print("1. ⚰️ 🏃🏻Run towards it and attack.")
+    #The coffin symbol is a hint that if you attack the Jubjub Bird with nothing, it will kill you.
+    print("")
+    print("2. ☺️ Gently approach the large bird.")
+    print("")
+    print("3. 😶‍🌫️ Hide behind a bushy bush.")
+
+    jubjub_choice = int(input("What do you choose? Insert number only."))
+
+
+    if jubjub_choice == 1:
+        print("You do not have the weapon to fight it, the Jubjub Bird kills you immediately.")
+        player_death()
+    elif jubjub_choice == 2:
+        print("You are very gentle, but the Jubjub Bird is not. It screeches and kills you.")
+        player_death()
+    elif jubjub_choice == 3:
+        print("You hid from the Jubjub Bird, it jumped elsewere.")
+        print("Press Enter to continue into the forest")
+        pause_3 = input("")
+        print("YOU MADE IT THROUGH THE FOREST!")
+        print("")
+        print("A beautiful village expands before you. On the edge of the village, a glorious wooden hut stood high and erect.")
+        enter_hut()
+    else:
+        print("Your input was invalid, please press Enter to try again.")
+        pause_error5 = input("")
+        jubjub_forest()
+
+
+
+menu_page()
+#Wow! 1000+ lines of code!
+#Really great feeling of accomplishment! I know I have celebrated in C1 already, but I'll do it again.
+#Horaay!
